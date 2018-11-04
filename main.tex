@@ -134,34 +134,6 @@ to achieve this last stage of developing the language.
 
 \section{Schedule}
 
-\newganttchartelement*{mymilestone}{
-mymilestone/.style={
-shape=isosceles triangle,
-inner sep=0pt,
-draw=cyan,
-top color=white,
-bottom color=cyan!50
-},
-mymilestone incomplete/.style={
-/pgfgantt/mymilestone,
-draw=yellow,
-bottom color=yellow!50
-},
-mymilestone label font=\slshape,
-mymilestone left shift=0pt,
-mymilestone right shift=0pt
-}
-
-\newgantttimeslotformat{stardate}{%
-\def\decomposestardate##1.##2\relax{%
-\def\stardateyear{##1}\def\stardateday{##2}%
-}%
-\decomposestardate#1\relax%
-\pgfcalendardatetojulian{\stardateyear-01-01}{#2}%
-\advance#2 by-1\relax%
-\advance#2 by\stardateday\relax%
-}
-
 \centerline{
 \begin{sideways}
 \begin{ganttchart}[vgrid, hgrid]{1}{30}
@@ -187,13 +159,14 @@ mymilestone right shift=0pt
 \gantttitlelist{1,2}{1}
 \gantttitlelist{11,...,15}{1}\\
 %First Group
-\ganttgroup{Research}{1}{4} \\
+\ganttgroup{Research}{1}{10} \\
 \ganttbar{Literature Review}{1}{4} \\
 \ganttbar{Transpilers}{1}{1}
 \ganttbar{}{5}{8}\\
 \ganttbar{Macros}{2}{2} \\
-\ganttbar{Interpreters}{2}{2} \\
-\ganttbar{Abstract Syntax Trees}{1}{4} \\
+\ganttbar{Interpreters}{2}{2}
+\ganttbar{}{5}{8} \\
+\ganttbar{Abstract Syntax Trees}{1}{10} \\
 %\ganttlink{elem0}{elem1}
 % \ganttlink{elem1}{elem2}
 % \ganttlink{elem2}{elem3}
@@ -205,19 +178,19 @@ mymilestone right shift=0pt
 \ganttbar{Review}{11}{12}\\
 \ganttbar{Main Implementation}{13}{18}\\
 \ganttbar{Further Development}{20}{24}\\
-\ganttlink{elem8}{elem9}
+\ganttlink{elem9}{elem10}
 % \ganttlink{elem5}{elem6}
 % \ganttlink{elem6}{elem7}
 %\ganttmilestone{Milestone 1}{11}
 %Third Group
-\ganttgroup{Misc}{100}{100} \\
+\ganttgroup{Writing}{1}{30} \\
 \ganttbar{Industry Presentation}{18}{21} \\
 \ganttbar{Poster \& Demo design}{26}{30} \\
 \ganttbar{Report}{3}{25} \\
 %\ganttlink{elem8}{elem9}
-\ganttlink{elem9}{elem10}
 \ganttlink{elem10}{elem11}
 \ganttlink{elem11}{elem12}
+\ganttlink{elem12}{elem13}
 %\ganttmilestone{Milestone 1}{11}
 \end{ganttchart}
 \end{sideways}}
