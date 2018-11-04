@@ -1,7 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\graphicspath{ {images/} }
 \usepackage{hyperref}
 \usepackage{pgfgantt}
 \usepackage{rotating}
@@ -9,6 +8,7 @@
 \usepackage[backend=biber, style=authoryear, sorting=nty]{biblatex}
 \renewcommand*{\nameyeardelim}{\addcomma\space}
 \addbibresource{bibliography.bib}
+\graphicspath{{images/}}
 
 \title{%
   Building a programming language without the dependency on English \\
@@ -48,7 +48,8 @@ to be used to program.
 
 \section{Aim}
 
-As a bilingual Computer Science student myself I have experienced the difficulties understanding and adapting to various programming
+As a bilingual Computer Science student myself 
+I have experienced the difficulties understanding and adapting to various programming
 languages first hand. I also have an avid interest in teaching people how to code. As a founding member of the BCU Hackathon and Computing Society \parencite{noauthor_hacs_nodate}
 I have ran many programming workshops for first year computer science students over the last two years. This year I am also a teaching a group of firs time coders
 how to code through Code First Girls\parencite{noauthor_code_nodate},
@@ -60,6 +61,26 @@ While developing the language I can also test attempt to teach it to users and s
 
 
 \section{Objectives}
+
+The main purpose of the language is to make it more approachable for new learners with no previous programming experience and crucially,
+little to no knowledge of English. To achieve this the basis and most crucial objective for the language will be to use no English based
+keywords whatsoever in the design of the language. Any such keywords go against the whole purpose of the language.
+This will be measured by checking the language specification once it has been finalised and checking that there are no keywords based on or derived from English.
+
+The next most important function of the language should be to be powerful enough to learn all major elements of programming.
+A measure for this would be for the language to be Turing Complete. This is to say that the language is as computationally powerful as a Turing machine \parencite{turing1936a}.
+This would enable users of the language to solve any computational problem within the language.
+
+The language should be easy and quick to get programming in.
+It would be foolish to create a language designed for learning that is incredibly difficult to install or configure.
+To achieve this there should be well designed tooling built around the language to assist users with getting set-up.
+This could include things like editor integration through a plugin, and easy installer or a completely web based UI so that
+there is no installation needed. This can be measured by exposing a group of users to the language and gathering feedback.
+The group can be comprised of first time coders, beginners and intermediate skilled coders.
+The feedback can be gathered as a survey from the users and by watching over the users and making notes of their performance.
+If users are able to create a basic program with little to no guidance then the objective of being easy to start programming in would be complete.
+
+\clearpage
 
 \section{The Product}
 
@@ -94,8 +115,7 @@ In this program any numbers divisible by 3 return Fizz, 5 return Buzz and if div
                 }
     \end{verbatim}
     \label{fig:javascript}
-\end{figure}    
-
+\end{figure}
 \begin{figure}[ht]
     \caption{Pseudocode example of a logographic approach}
     \centering
@@ -118,6 +138,9 @@ By creating this language I hope to make a language that is accessible and sensi
 programming experience. By utilising symbols users only need to learn the meaning of a symbol and not concern themselves
 with the difficulty of understanding the characters or cultural nuances \parencite{Eastman:1982:CEN:358728.358756} of another language.
 
+The end product does not aim to compete with any traditional language on features, speed or security like a language traditionally would.
+Therefore the focus for this product is not the same as a traditional language and aims to experiment in different ways.
+By working outside the traditional requirements for a language we can tackle problems that have yet to be looked at.
 
 \section{Methodology}
 
@@ -133,6 +156,32 @@ to achieve this last stage of developing the language.
 
 
 \section{Schedule}
+
+Due to the unique challenges associated with creating a new programming language the process needs be split up into manageable sections.
+
+For the initial development phase I will be creating a series of minimum viable products (MVP's). This will allow me the time and flexibility to 
+experiment with Implementation methods. At this stage of the project there isn't a clear best approach. As my first MVP I will attempt to create
+a transpiler that will transpile to JavaScript. Depending on the difficulty and success of this MVP I will then attempt to create an interpreted or VM based language.
+
+Before getting to this stage however I will need to learn about transpilers, interpreters and any other alternative methods of creating a language. This will be carried out
+during an initial research phase and then continued in parallel with the MVP development process.
+During the MVP process there will be allot of issues to overcome so it is important to schedule in research time within this phase.
+
+Another step to come just before the initial MVP stage is to clearly define the symbols to be used in the language. This is a crucial
+part as it defines the whole language and all subsequent steps.
+
+Following the development of the MVPs there will need to be some time to review the success of each method.
+This stage will determine how the final implementation will be carried out. The most successfully implementation, transpiled, interpreted or vm based will be taken further and made fully featured.
+
+During the main implementation period is when the tooling and ease of use of the language will be addressed.
+Depending on time constraints during this step there will be a browser based interface created to aid in the ease of use and to achieve the goal of being able to run without installation.
+
+The main implementation section extends up until the Industry presentation where I will be able to gather some feedback.
+Some of this feedback can then be worked into the further development stage. This stage then continues up until the report deadline.
+
+In parallel to all of this the report is also being written and pieced together, detailing the successes and failures of the MVP stages, the research and the whole design and implementation of the language.
+
+Bellow is a gantt chart which shows the schedule as individual blocks of 1 week. Each week is numbered with the matching semester week. Those that are not within a semester, \emph{Christmas Holidays}, \emph{Exams}, and  \emph{Easter} have their own week numbers. The chart starts from Semester 1, commencing from Week 7.
 
 \centerline{
 \begin{sideways}
